@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <title>Форма обратной связи</title>
+</head>
+<style>
+  .back label
+  {
+   font-weight: bold;
+  }
+
+  /*форматирование областей ввода темы, почты и сообщения*/
+  .back input[type="text"],
+  .back input[type="email"]
+  {
+  border-radius: 5px;
+   display: flex;
+   min-width: 100px;
+   width: 90%;
+   padding: 10px;
+   resize: vertical;
+   font-size: 14px;
+   height: 10px;
+  }
+  .back textarea {
+   border-radius: 5px;
+   display: flex;
+   min-width: 100px;
+   width: 90%;
+   padding: 10px;
+   resize: vertical;
+   font-size: 14px;
+   height: 100px;
+  }
+
+  body {
+  font-family: Arial, sans-serif;
+  }
+  /*кнопка при наведении*/
+  .back input[type="submit"]:hover {
+   background-color: #000000;
+   color: #ffffff
+  }
+  /*кнопка по умолчанию*/
+  .back input[type="submit"] {
+   background-color: #02f707;
+   color: #000000;
+   font-size: 14px;
+  }
+
+  /* форматирование успешной отправки */
+  .back .success-message {
+   color: #09e030;
+   text-align: center;
+  }
+
+  /* форматирование сообщения об ошибке */
+  .back .error-message
+  {
+   color: #87081b;
+   text-align: center;
+  }
+
+  /*поле ошибки*/
+  .back .form-error
+  {
+    border-color: #050505;
+  }
+
+  #feedback-form
+  {
+    width: 70%;
+  }
+  </style>
+<body>
+<div class="back">
+  <div class="navMenu">
+    <ul>
+        <li><a href="file:index.html">Главная страница</a></li>
+        <li><a href="file:2.html">Об авторе</a></li>
+        <li><a href="file:1.html">Обратная связь</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <h2 style="text-align: center">Форма обратной связи</h2>
+    <form action="/submit-feedback" method="post" id="feedback-form">
+     <label for="email">Email адрес:</label>
+     <input type="email" id="email" name="email" required>
+     <label for="subject">Тема:</label>
+     <input type="text" id="subject" name="subject" required>
+     <label for="message">Сообщение:</label>
+     <textarea id="message" name="message" rows="5" required></textarea>
+     <input type="submit" value="Отправить">
+     <div class="success-message" style="display: none;">Сообщение отправлено</div>
+     <div class="error-message" style="display: none;">Возникла ошибка, попробуйте ещё</div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.back
+{
+  border: solid;
+  border-color: #501b1d;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  min-height: 1000px;
+  height: auto;
+  background-color: #ADADAD;
+  grid-template-columns: 15% 70% 15%;
+}
+
+.main
+{
+  border-radius: 5px;
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+  background-color: #83677B;
+  border-style: solid;
+  border-color: #501b1d;
+}
+
+.navMenu
+{
+  margin-right: auto;
+  display: flex;
+  justify-self: left;
+  width: 100%;
+}
